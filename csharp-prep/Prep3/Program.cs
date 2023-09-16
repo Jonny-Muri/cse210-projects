@@ -13,20 +13,17 @@ class Program
         int magic = int.Parse(magicnum);
         int guess = int.Parse(guessnum);
 
-        while (guess < magic)
-        {
-            Console.WriteLine("Higher");
-            break;
-        }
-        while (guess > magic)
+        if(guess > magic)
         {
             Console.WriteLine("Lower");
-            break;
         }
-        while (guess == magic)
+        else if (guess <magic)
         {
-            Console.WriteLine("You guess correctly!");
-            break;
+            Console.WriteLine("Higher");
+        }
+        else
+        {
+            Console.WriteLine("You guessed correctly!");
         }
 
     }
