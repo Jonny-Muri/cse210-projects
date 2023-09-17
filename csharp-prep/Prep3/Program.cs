@@ -29,6 +29,5 @@ class Program
                 Console.WriteLine("You guessed correctly!");
             }
         }
-
     }
 }
