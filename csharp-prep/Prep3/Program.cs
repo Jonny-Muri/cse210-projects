@@ -1,30 +1,33 @@
 using System;
+using System.Net;
 
 class Program
 {
     static void Main(string[] args)
     {
         
-        Console.Write("What is the magic number? ");
-        string magicnum = Console.ReadLine();
-        Console.Write("What is your guess? ");
-        string guessnum = Console.ReadLine();
+        Random randomGenerator = new Random();
+        int magic = randomGenerator.Next(1,101);
 
-        int magic = int.Parse(magicnum);
-        int guess = int.Parse(guessnum);
+        int guess = -1;
 
-        if(guess > magic)
+        while (guess != magic)
         {
-            Console.WriteLine("Lower");
-        }
-        else if (guess <magic)
-        {
-            Console.WriteLine("Higher");
-        }
-        else
-        {
-            Console.WriteLine("You guessed correctly!");
-        }
+            Console.Write("What is your guess? ");
+            guess = int.Parse(Console.ReadLine());
 
+            if(guess > magic)
+            {
+               Console.WriteLine("Lower");
+            }
+            else if (guess < magic)
+            {
+                Console.WriteLine("Higher");
+            }
+            else
+            {
+                Console.WriteLine("You guessed correctly!");
+            }
+        }
     }
 }
