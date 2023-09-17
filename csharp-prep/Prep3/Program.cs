@@ -18,7 +18,7 @@ class Program
 
             if(guess > magic)
             {
-               Console.WriteLine("Lower");
+                Console.WriteLine("Lower");
             }
             else if (guess < magic)
             {
@@ -29,5 +29,6 @@ class Program
                 Console.WriteLine("You guessed correctly!");
             }
         }
+
     }
 }
