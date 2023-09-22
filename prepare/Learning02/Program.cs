@@ -25,7 +25,9 @@ class Program
 
 
 
-        // Test Job class before creating a display
+        // Testing Job class before creating a single Display
+        // Helps me to take things one at a time
+        // This is here to help understand the concept of this learning exercise
         /*
         job1._jobTitle = "Software Engineer";
         job1._company = "(Microsoft)";
