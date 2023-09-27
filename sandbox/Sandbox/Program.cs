@@ -1,12 +1,16 @@
 using System.Collections.Generic;
 
-public class PromptGenerator
+class Program
 {
-    public List<string> _prompts;
 
-    public void GetRandomPrompt()
+    static void Main(string[] args)
     {
-        Console.WriteLine("Hellow Sandboxworld");
+        Console.WriteLine("Please push the enter key: ");
+        Console.ReadLine();
+
+        Console.Clear();
+
+        Console.WriteLine("BBB");
 
     }
 }
