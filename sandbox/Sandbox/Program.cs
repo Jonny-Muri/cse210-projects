@@ -4,13 +4,31 @@ class Program
 {
 
     static void Main(string[] args)
+
     {
-        Console.WriteLine("Please push the enter key: ");
-        Console.ReadLine();
+        string[] wordsToHide = { "apple", "banana", "cherry", "date", "grape", "kiwi", "mango", "orange", "pear", "strawberry" };
 
-        Console.Clear();
+        while (true)
+        {
+            Console.Clear();
+            string sentence = "I like to eat apple, banana, cherry, and strawberry.";
 
-        Console.WriteLine("BBB");
+            // Randomly select words to hide
+            Random random = new Random();
+            int numberOfWordsToHide = random.Next(1, 4); // Randomly choose 1 to 3 words to hide
 
+            for (int i = 0; i < numberOfWordsToHide; i++)
+            {
+                int wordIndex = random.Next(wordsToHide.Length);
+                string wordToHide = wordsToHide[wordIndex];
+                sentence = sentence.Replace(wordToHide, new string('*', wordToHide.Length));
+            }
+
+            Console.WriteLine(sentence);
+            Thread.Sleep(2000); // Wait for 2 seconds before clearing the console again
+        }
     }
+
+
+    
 }
