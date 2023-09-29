@@ -3,36 +3,35 @@ using System;
 public class Word
 {
     private string _text;
-    private bool isHidden;
+    private bool _isHidden;
 
     public Word(string text)
     {
         _text = text;
-        
+
     }
 
     //This looks like a Setter
     public void Hide()
     {
-
+        _isHidden = true;
     }
 
-    //This looks like a Getter
+    //This looks like a setter
     public void Show()
     {
-
+        _isHidden = false;
     }
 
-    // Should be a Bool instead of void
-    public void IsHidden()
+    // This is a getter
+    public bool IsHidden()
     {
-
+        return _isHidden;
     }
 
-    // Should be a String instead of void
-    public void GetDisplayText()
+    public string GetDisplayText()
     {
-
+        return _text;
     }
 
 }

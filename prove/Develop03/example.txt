@@ -1,0 +1,2 @@
+"Have ye suffered so..."
+_scripture = ["Have", "ye", "suffered", "so"]
