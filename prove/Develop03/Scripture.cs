@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using Microsoft.VisualBasic;
 
 class Scripture
@@ -26,18 +27,19 @@ class Scripture
 
     public void HideRandomWords(int numberToHide)
     {
-        numberToHide = r.Next(_words.Count);
+        numberToHide = r.Next(1,3);
+
     }
 
     public string GetDisplayText()
     {
-        
-        return String.Format("{0} {1}", _reference, _words);
+        string combined = string.Join(" ", _words);
+        return String.Format("{0} {1}", _reference, combined);
     }
 
     //This needs to be a bool
     public bool IsCompletelyHidden()
     {
-        return true;
+        return false;
     }
 }

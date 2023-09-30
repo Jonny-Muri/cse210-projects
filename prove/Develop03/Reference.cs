@@ -6,13 +6,13 @@ public class Reference
     private int _verse;
     private int _endVerse;
 
-
     public Reference(string book, int chapter, int verse)
     {
         _book = book;
         _chapter = chapter;
         _verse = verse;
         _endVerse = 0;
+
     }
 
     public Reference(string book, int chapter, int startVerse, int endVerse)
@@ -33,7 +33,7 @@ public class Reference
         }
         else
         {
-            return String.Format("{0} {1}:{2} - {3}", _book, _chapter.ToString(), _verse.ToString(), _endVerse.ToString());
+            return String.Format("{0} {1}:{2}-{3}", _book, _chapter.ToString(), _verse.ToString(), _endVerse.ToString());
         }
     }
 }
