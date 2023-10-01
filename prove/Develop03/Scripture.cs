@@ -34,12 +34,12 @@ class Scripture
     public string GetDisplayText()
     {
         string combined = string.Join(" ", _words);
-        return String.Format("{0} {1}", _reference, combined);
+        return String.Format("{0} {1}", _reference.GetDisplayText(), combined);
     }
 
     //This needs to be a bool
     public bool IsCompletelyHidden()
     {
-        return false;
+        return true;
     }
 }

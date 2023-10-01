@@ -10,6 +10,8 @@ class Program
         
         
         Console.WriteLine(refer.GetDisplayText());
+
         Console.WriteLine(script.GetDisplayText());
+
     }
 }
