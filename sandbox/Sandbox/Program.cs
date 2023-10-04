@@ -5,21 +5,22 @@ class Program
 {
     static void Main(string[] args)
     {
-        Person p0 = new Person();
-        p0.setFirst("Jonathan");
-        Console.WriteLine(p0.getFirst());
-    }
-}
-public class Person
-{
-    private string _firstName;
-    public void setFirst(string firstname)
-    {
-        _firstName = firstname;
-    }
-    public string getFirst()
-    {
-        return _firstName;
-    }
+        Console.Clear();
 
+        Console.WriteLine("Loading... ");
+
+        char[] animationChars = {'|', '/', '-', '\\'};
+
+        for (int i = 0; i < 20; i++)
+        {
+            char animationChar = animationChars[i % animationChars.Length];
+
+            Console.Write("\r" + animationChar);
+
+            Thread.Sleep(100);
+        }
+        Console.Clear();
+
+        Console.WriteLine("Loading complete!");
+    }
 }
