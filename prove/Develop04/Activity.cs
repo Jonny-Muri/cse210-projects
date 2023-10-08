@@ -5,9 +5,9 @@ public class Activity
 {
     protected string _name;
     protected string _description;
-    protected int _duration;
+    protected double _duration;
 
-    public Activity(string name, string descrip, int duration)
+    public Activity(string name, string descrip, double duration)
     {
         _name = name;
         _description = descrip;

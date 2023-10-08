@@ -6,7 +6,7 @@ public class ListingActivity : Activity
     private int _count;
     private List<string> _prompts;
 
-    public ListingActivity(string name, string descrip, int duration) : base(name, descrip, duration)
+    public ListingActivity(string name, string descrip, double duration) : base(name, descrip, duration)
     {
         _name = name;
         _description = descrip;
@@ -26,8 +26,24 @@ public class ListingActivity : Activity
         Console.Clear();
         Console.WriteLine("List as many responses you can to the following prompt: ");
         GetRandomPrompt();
-        Console.ReadLine();
-        // ShowSpinner(6);
+        // Console.ReadLine();
+        ShowCountDown(6);
+        Thread.Sleep(200);
+
+        DateTime startTime = DateTime.Now;
+        DateTime endTime = startTime.AddSeconds(_duration * 10);
+
+
+        while(DateTime.Now < endTime)
+        {
+            GetListFromUser();
+        }
+        Console.WriteLine("\nWell Done!");
+        Console.WriteLine($"You have completed {_duration}0 seconds of the Relfecting Activity");
+        Thread.Sleep(4500);
+        Console.Clear();
+
+
 
     }
     public string GetRandomPrompt()
@@ -48,6 +64,12 @@ public class ListingActivity : Activity
     }
     public string GetListFromUser()
     {
+        List<string> answer = new List<string>();
+        Console.Write("> ");
+        string input = Console.ReadLine();
+        answer.Add(input);
+        Console.WriteLine($"You have listed {answer.Count} times");
+
         return "";
     }
 

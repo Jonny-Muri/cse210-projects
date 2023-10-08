@@ -3,7 +3,7 @@ using System.IO;
 
 public class BreathingActivity : Activity
 {
-    public BreathingActivity(string name, string descrip, int duration) : base(name, descrip, duration)
+    public BreathingActivity(string name, string descrip, double duration) : base(name, descrip, duration)
     {
         _name = name;
         _description = descrip;
@@ -24,15 +24,35 @@ public class BreathingActivity : Activity
         Thread.Sleep(400);
         //Action of the Activity
         Console.Clear();
-        Console.Write("Breath in...");
-        ShowCountDown(5);
-        Console.Write("\nAnd breath out... ");
-        ShowCountDown(6);
-        Console.Write("\nBreath in... ");
-        ShowCountDown(5);
-        Console.Write("\nAnd breath out... ");
-        ShowCountDown(6);
+        DateTime startTime = DateTime.Now;
+        DateTime endTime = startTime.AddSeconds(_duration * 10);
+
+
+        while(DateTime.Now < endTime)
+        {
+            Console.Write("Breath in...");
+            ShowCountDown(5);
+            Console.Write("And breath out... ");
+            ShowCountDown(6);
+            Console.WriteLine();
+            Console.Write("Breath in...");
+            ShowCountDown(5);
+            Console.Write("And breath out... ");
+            ShowCountDown(6);
+            Console.WriteLine();
+        }
+
+        // Console.Write("Breath in...");
+        // ShowCountDown(5);
+        // Console.Write("And breath out... ");
+        // ShowCountDown(6);
+        // Console.Write("\nBreath in... ");
+        // ShowCountDown(5);
+        // Console.Write("\nAnd breath out... ");
+        // ShowCountDown(6);
         Console.WriteLine("\nWell Done!");
+        Console.WriteLine($"You have completed {_duration}0 seconds of the Relfecting Activity");
+        Thread.Sleep(4500);
         Console.Clear();
         
     }

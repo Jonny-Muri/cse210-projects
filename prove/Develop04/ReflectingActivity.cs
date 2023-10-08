@@ -6,7 +6,7 @@ public class ReflectingActivity : Activity
     private List<string> _prompts;
     private List<string> _questions;
 
-    public ReflectingActivity(string name, string descrip, int duration) : base(name, descrip, duration)
+    public ReflectingActivity(string name, string descrip, double duration) : base(name, descrip, duration)
     {
         _name = name;
         _description = descrip;
@@ -33,7 +33,7 @@ public class ReflectingActivity : Activity
         Console.Clear();
         DisplayQuestions();
         Console.WriteLine("\nWell Done!");
-        Console.WriteLine($"You have completed {_duration} seconds of the Relfecting Activity");
+        Console.WriteLine($"You have completed {_duration}0 seconds of the Relfecting Activity");
         Thread.Sleep(4500);
         Console.Clear();
 
