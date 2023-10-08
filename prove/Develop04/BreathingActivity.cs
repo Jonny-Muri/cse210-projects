@@ -27,7 +27,6 @@ public class BreathingActivity : Activity
         DateTime startTime = DateTime.Now;
         DateTime endTime = startTime.AddSeconds(_duration * 10);
 
-
         while(DateTime.Now < endTime)
         {
             Console.Write("Breath in...");
@@ -42,21 +41,10 @@ public class BreathingActivity : Activity
             Console.WriteLine();
         }
 
-        // Console.Write("Breath in...");
-        // ShowCountDown(5);
-        // Console.Write("And breath out... ");
-        // ShowCountDown(6);
-        // Console.Write("\nBreath in... ");
-        // ShowCountDown(5);
-        // Console.Write("\nAnd breath out... ");
-        // ShowCountDown(6);
         Console.WriteLine("\nWell Done!");
         Console.WriteLine($"You have completed {_duration}0 seconds of the Relfecting Activity");
         Thread.Sleep(4500);
         Console.Clear();
         
     }
-
-
-
 }

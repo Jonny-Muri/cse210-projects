@@ -3,7 +3,6 @@ using System.IO;
 
 public class ListingActivity : Activity
 {
-    private int _count;
     private List<string> _prompts;
 
     public ListingActivity(string name, string descrip, double duration) : base(name, descrip, duration)

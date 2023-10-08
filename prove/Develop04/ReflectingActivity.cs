@@ -36,7 +36,6 @@ public class ReflectingActivity : Activity
         Console.WriteLine($"You have completed {_duration}0 seconds of the Relfecting Activity");
         Thread.Sleep(4500);
         Console.Clear();
-
     }
     public string GetRandomPrompt()
     {
@@ -86,7 +85,4 @@ public class ReflectingActivity : Activity
         GetRandomQuestions();
         ShowCountDown(5);
     }
-
-
-
 }

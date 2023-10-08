@@ -57,7 +57,6 @@ public class Activity
             }
         }
         Console.Clear();
-    
     }
     public void ShowCountDown(int seconds)
     {
@@ -70,7 +69,4 @@ public class Activity
         }
         Console.WriteLine();
     }
-
-
-
 }
