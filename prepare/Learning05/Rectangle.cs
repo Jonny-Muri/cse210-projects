@@ -1,13 +1,14 @@
 using System;
 
-class Rectangle : Shape
+public class Rectangle : Shape
 {
-    private double _length;
-    private double _width;
+    private double _length = 0;
+    private double _width = 0;
 
-    public Rectangle()
+    public Rectangle(string color, double length, double width) : base(color)
     {
-
+        _length = length;
+        _width = width;
     }
 
     public double GetLength()
@@ -16,7 +17,7 @@ class Rectangle : Shape
     }
     public void SetLength(double length)
     {
-        _length = length
+        _length = length;
     }
     public double GetWidth()
     {

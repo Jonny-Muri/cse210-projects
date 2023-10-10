@@ -4,14 +4,14 @@ public abstract class Shape
 {
     protected string _color;
 
-    public Shape()
+    public Shape(string color)
     {
-
+        _color = color;
     }
 
     public string GetColor()
     {
-        return _color
+        return _color;
     }
 
     public void SetColor(string color)
