@@ -8,10 +8,8 @@ class Square : Shape
     {
         _color = color;
         _side = side;
-        GetSide();
-        GetArea();
-    }
 
+    }
     public double GetSide()
     {
         return _side;
