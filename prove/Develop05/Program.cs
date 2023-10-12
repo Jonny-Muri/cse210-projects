@@ -4,7 +4,7 @@ class Program
 {
     static void Main(string[] args)
     {
-
+        GoalManager goal = new GoalManager();
 
         int input = -1;
         while (input != 6)
@@ -23,6 +23,7 @@ class Program
             switch(input)
             {
                 case 1:
+                goal.CreateGoal();
                 break;
                 case 2:
                 break;

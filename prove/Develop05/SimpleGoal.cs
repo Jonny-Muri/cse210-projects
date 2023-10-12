@@ -4,8 +4,10 @@ public class SimpleGoal : Goal
 {
     private bool _isComplete;
 
-    public SimpleGoal(string name, string description, string points) : base(name, description, points)
+    public SimpleGoal(string name, string description, int points) : base(name, description, points)
     {
+        
+        
 
     }
 
@@ -16,11 +18,11 @@ public class SimpleGoal : Goal
 
     public override bool IsComplete()
     {
-        return true;
+        return false;
     }
 
     public override string GetStringRepresentation()
     {
-        return "";
+        return $"{_shortName}  ({_description})";
     }
 }

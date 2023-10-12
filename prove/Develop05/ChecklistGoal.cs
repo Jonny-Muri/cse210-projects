@@ -6,7 +6,7 @@ public class ChecklistGoal : Goal
     private int _target;
     private int _bonus;
 
-    public ChecklistGoal(string name, string description, string points) : base(name, description, points)
+    public ChecklistGoal(string name, string description, int points) : base(name, description, points)
     {
 
     }
@@ -18,7 +18,7 @@ public class ChecklistGoal : Goal
 
     public override bool IsComplete()
     {
-        return true;
+        return false;
     }
 
     public string GetDetailsString()
