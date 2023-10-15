@@ -5,27 +5,31 @@ class Program
 {
     static void Main(string[] args)
     {
-        Student student = new Student();
-        string name = student.GetName();
-        string num = student.GetNumber();
-        Console.WriteLine(name);
-        Console.WriteLine(num);
+        SalaryEmployee salary = new SalaryEmployee();
+        HourlyEmployee hourly = new HourlyEmployee();
+        Console.WriteLine(salary.CalculatePay());
+        Console.WriteLine(hourly.CalculatePay());
     }
-
-    public class Person
+    public abstract class Employee
     {
-        public string GetName()
-        {
-            return "Johnny";
-        }
-
+        protected string _name;
+        public abstract float CalculatePay();
     }
-    public class Student : Person
+    public class SalaryEmployee : Employee
     {
-        public string GetNumber()
+        private float _salary = 1000f;
+        public override float CalculatePay()
         {
-            return "058794622";
+            return _salary;
         }
     }
-
+    public class HourlyEmployee : Employee
+    {
+        private float _rate = 9f;
+        private float _hours = 100f;
+        public override float CalculatePay()
+        {
+            return _rate * _hours;
+        }
+    }
 }
