@@ -1,3 +1,3 @@
-Give a talk, Accept assignment from bishopric, 10, False
-Read the scriptures, Read 10 minutes a day, 20
-Attend the temple, Go to temple, 50, 500, 3, 0
+Simple: Give a talk, Accept assignment from bishopric, 10, False
+Eternal: Read the scriptures, Read 10 minutes a day, 20
+Checklist: Attend the temple, Go to temple, 50, 400, 3, 0

@@ -194,6 +194,43 @@ public class GoalManager
         foreach (string line in lines)
         {
             string [] parts = line.Split(':', ',');
+            if (parts[0] == "Simple")
+            {
+                string name = parts[1];
+                string description = parts[2];
+                string point = parts[3];
+                int points = int.Parse(point);
+                string complete = parts[4];
+                Convert.ToBoolean(complete);
+                SimpleGoal simple = new SimpleGoal(name,description,points);
+            }
+            else if (parts[0] == "Eternal")
+            {
+                string name = parts[1];
+                string description = parts[2];
+                string point = parts[3];
+                int points = int.Parse(point);
+                EternalGoal eternal = new EternalGoal(name, description, points);
+            }
+            else if (parts[0] == "Checklist")
+            {
+                string name = parts[1];
+                string description = parts[2];
+                string point = parts[3];
+                int points = int.Parse(point);
+
+                string bonuses = parts[4];
+                int bonus = int.Parse(bonuses);
+
+                string targets = parts[5];
+                int target = int.Parse(targets);
+
+                string amountCompletes = parts[6];
+                int amountComplete = int.Parse(amountCompletes);
+                
+                ChecklistGoal check = new ChecklistGoal(name, description, points, target, bonus);
+                
+            }
         }
     }
 }
