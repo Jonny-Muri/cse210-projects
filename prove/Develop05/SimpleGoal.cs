@@ -6,7 +6,7 @@ public class SimpleGoal : Goal
 
     public SimpleGoal(string name, string description, int points) : base(name, description, points)
     {
-        
+        _goalType = "Simple";
         
 
     }
@@ -23,6 +23,6 @@ public class SimpleGoal : Goal
 
     public override string GetStringRepresentation()
     {
-        return $"{_shortName}  ({_description})";
+        return $"{_goalType}: {_shortName}, {_description}, {_points}, {_isComplete}";
     }
 }
