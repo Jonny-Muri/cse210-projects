@@ -203,6 +203,7 @@ public class GoalManager
                 string complete = parts[4];
                 Convert.ToBoolean(complete);
                 SimpleGoal simple = new SimpleGoal(name,description,points);
+                _goals.Add(simple);
             }
             else if (parts[0] == "Eternal")
             {
@@ -211,6 +212,7 @@ public class GoalManager
                 string point = parts[3];
                 int points = int.Parse(point);
                 EternalGoal eternal = new EternalGoal(name, description, points);
+                _goals.Add(eternal);
             }
             else if (parts[0] == "Checklist")
             {
@@ -229,7 +231,7 @@ public class GoalManager
                 int amountComplete = int.Parse(amountCompletes);
                 
                 ChecklistGoal check = new ChecklistGoal(name, description, points, target, bonus);
-                
+                _goals.Add(check);
             }
         }
     }
