@@ -23,6 +23,7 @@ class Scripture
             // and append it to the list of Word objects.
             _words.Add(newWord);
         }
+
     }
 
     public void HideRandomWords(int numberToHide)
