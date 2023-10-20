@@ -3,6 +3,19 @@ using System;
 public class Customer
 {
     private string _name;
-    private string _address;
      
+     public Customer(string name)
+     {
+        _name = name;
+     }
+
+     public string GetName()
+     {
+        return _name;
+     }
+     public void Display()
+     {
+        Console.WriteLine($"Name: {_name}");
+
+     }
 }
