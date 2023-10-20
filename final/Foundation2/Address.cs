@@ -15,23 +15,6 @@ public class Address
         _stateProvidence = stateProvidence;
         _country = country;
     }
-    // public string GetStreet()
-    // {
-    //     return _street;
-    // }
-    // public string GetCity()
-    // {
-    //     return _city;
-    // }
-    // public string GetState()
-    // {
-    //     return _stateProvidence;
-    // }
-    // public string GetCountry()
-    // {
-    //     return _country;
-    // }
-
 
     public void Display()
     {

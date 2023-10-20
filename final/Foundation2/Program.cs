@@ -12,11 +12,15 @@ class Program
         order2.CreateProduct();
 
         Console.WriteLine("Order 1: ");
+        Console.WriteLine("Packing Label");
         order1.DisplayPacking();
+        Console.WriteLine("Shipping Label");
         order1.DisplayShipping();
         order1.CalculatePay();
         Console.WriteLine("Order 2: ");
+        Console.WriteLine("Packing Label");
         order2.DisplayPacking();
+        Console.WriteLine("Shipping Label");
         order2.DisplayShipping();
         order2.CalculatePay();
 

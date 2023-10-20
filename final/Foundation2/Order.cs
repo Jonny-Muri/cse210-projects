@@ -57,7 +57,7 @@ public class Order
         Address address = new Address(_street, _city, _stateProvidence, _country);
 
         int i = 0;
-        while (i < 2)
+        while (i < 3)
         {
             Console.WriteLine("What is the name of the product? ");
             _productName = Console.ReadLine();
