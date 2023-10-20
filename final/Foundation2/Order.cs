@@ -96,7 +96,7 @@ public class Order
             }
             total += 5;
         }
-        Console.WriteLine($"Total Price: {Math.Round(total, 2)}");
+        Console.WriteLine($"Total Price (Including Shipping Fee): {Math.Round(total, 2)}");
     }
  
 }
