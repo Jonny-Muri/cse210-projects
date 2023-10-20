@@ -4,8 +4,8 @@ public class Video
 {
     private string _title;
     private string _author;
-    // Length will be in seconds
-    private int _length;
+    private int _length; // This will be in seconds
+    public List<Comment> _comments = new List<Comment>();
     
     public Video(string title, string author, int length)
     {
@@ -17,18 +17,19 @@ public class Video
     public void Display()
     {
         Console.WriteLine($"\n{_title} by {_author}\nLength: {_length} Seconds");
+        Console.WriteLine("Comment Section: ");
     }
 
-    public string GetTitle()
-    {
-        return _title;
-    }
-    public string GetAuthor()
-    {
-        return _author;
-    }
-    public int GetLength()
-    {
-        return _length;
-    }
+    // public string GetTitle()
+    // {
+    //     return _title;
+    // }
+    // public string GetAuthor()
+    // {
+    //     return _author;
+    // }
+    // public int GetLength()
+    // {
+    //     return _length;
+    // }
 }
