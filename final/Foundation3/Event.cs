@@ -26,11 +26,6 @@ public class Event
         return standard;
     }
 
-    public string FullDetails()
-    {
-        return "";
-    }
-
     public string ShortDescription()
     {
         Console.WriteLine("\nShort Description: ");
