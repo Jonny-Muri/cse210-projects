@@ -17,14 +17,42 @@ public class Comment
         for (int i = 0; i <=2; i++)
         {
             Console.WriteLine($"{_name[i]}: ");
-            
-            for (int j = 0; j <=2; j++)
-            {
-                Console.WriteLine(_comment[j]);
-                j++;
-                break;
-            }
+            Console.WriteLine(_comment[i]);
         }
     }
+
+    public void Display2()
+    {
+        _name.Add("Joseph");
+        _name.Add("Rick");
+        _name.Add("Stephen");
+        _comment.Add("That was the best event ever!");
+        _comment.Add("That looks very scary to be the driver.");
+        _comment.Add("I will never have the courage to do that!");
+        
+        for (int i = 0; i <=2; i++)
+        {
+            Console.WriteLine($"{_name[i]}: ");
+            Console.WriteLine(_comment[i]);
+        }
+    }
+
+    public void Display3()
+    {
+        _name.Add("Rose");
+        _name.Add("Mick");
+        _name.Add("Theresa");
+        _comment.Add("Imagine the air through your hair!");
+        _comment.Add("It looks so graceful and daring at the same time.");
+        _comment.Add("What would happen if you knock into another person? I wonder.");
+        
+        for (int i = 0; i <=2; i++)
+        {
+            Console.WriteLine($"{_name[i]}: ");
+            Console.WriteLine(_comment[i]);
+        }
+    }
+   
+   
    
 }
