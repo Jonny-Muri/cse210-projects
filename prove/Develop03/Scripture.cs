@@ -28,13 +28,42 @@ class Scripture
 
     public void HideRandomWords(int numberToHide)
     {
-        numberToHide = r.Next(1,3);
+        int valueToHide = 0;
+        foreach(Word word in _words)
+        {
+            if(word.IsHidden() == false && numberToHide > valueToHide)
+            {
+                valueToHide ++;
+            }
+        }
 
+        Random random = new Random();
+        // loop numberToHide times
+        for (int i = 0; i < valueToHide; i++)
+        {
+        // generate a random number between 0 - _words.length
+            int j = random.Next(0, _words.Count());
+
+        // if _words[i].getIsHidden() is already true, get a different random number
+            while (_words[j].IsHidden() == true)
+            {
+                j = random.Next(0, _words.Count());
+            }
+        // if _words[i].getIsHidden() is false, than change _isHidden to True
+            if(_words[j].IsHidden() == false)
+            {
+                _words[j].Hide();
+            }
+        }
     }
 
     public string GetDisplayText()
     {
-        string combined = string.Join(" ", _words);
+        string combined = "";
+        foreach (Word ctext in _words)
+        {
+            combined += " " + ctext.GetDisplayText();
+        }
         return String.Format("{0} {1}", _reference.GetDisplayText(), combined);
     }
 

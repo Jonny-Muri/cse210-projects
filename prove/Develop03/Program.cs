@@ -9,9 +9,18 @@ class Program
         
         Console.Clear();
         
-        Console.WriteLine(script.GetDisplayText());
-        Console.WriteLine("Press enter to continue or type 'quit' to finish");
-        Console.ReadLine();
+        string input = "";
+        while (input != "quit")
+        {
+            Console.WriteLine(script.GetDisplayText());
+            Console.WriteLine("Press enter to continue or type 'quit' to finish");
+            input = Console.ReadLine();
+            if(input != "quit")
+            {
+                script.HideRandomWords(3);
+            }
+            Console.Clear();
+        }
         
     }
 }

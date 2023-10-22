@@ -15,6 +15,13 @@ public class Word
     public void Hide()
     {
         _isHidden = true;
+        string word = "";
+        for(int i = 0; i < _text.Length; i++)
+        {
+            word += "_";
+        }
+
+        _text = word;
     }
 
     //This looks like a setter
