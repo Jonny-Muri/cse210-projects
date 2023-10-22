@@ -7,18 +7,18 @@ public class Running : Activity
         _activityType = "Running";
     }
 
-    public override void GetDistance()
+    public override string GetDistance()
     {
-        
+        return _distance.ToString();
     }
 
-    public override void GetSpeed()
+    public override string GetSpeed()
     {
-        
+        return "";
     }
 
-    public override void GetPace()
+    public override string GetPace()
     {
-        
+        return "";
     }
 }

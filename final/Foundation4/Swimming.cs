@@ -9,22 +9,25 @@ public class Swimming : Activity
         _activityType = "Swimming";
     }
 
-    public override void GetDistance()
+    public override string GetDistance()
     {
         _distance = _laps * 50 / 1000;
-        Console.WriteLine(_distance);
+        return _distance.ToString();
+        
     }
 
-    public override void GetSpeed()
+    public override string GetSpeed()
     {
-        _speed = (_distance / _length) * 60;
-        Console.WriteLine(_speed);
+        _speed = _distance / ((float)_length) * 60;
+        return _speed.ToString();
+        
     }
 
-    public override void GetPace()
+    public override string GetPace()
     {
-        _pace = _minutes / _distance;
-        Console.WriteLine(_pace);
+        _pace = ((float)_length) / _distance;
+        return _pace.ToString();
+        
     }
         
 }

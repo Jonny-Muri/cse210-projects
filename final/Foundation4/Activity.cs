@@ -5,10 +5,9 @@ public abstract class Activity
 {
     protected string _date;
     protected double _length;
-    protected double _distance;
-    protected double _speed;
-    protected double _pace;
-    protected double _minutes;
+    protected float _distance;
+    protected float _speed;
+    protected float _pace;
     protected string _activityType;
 
 
@@ -26,8 +25,8 @@ public abstract class Activity
         return text;
     }
 
-    public abstract void GetDistance();
-    public abstract void GetSpeed();
-    public abstract void GetPace();
+    public abstract string GetDistance();
+    public abstract string GetSpeed();
+    public abstract string GetPace();
     
 }

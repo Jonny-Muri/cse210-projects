@@ -7,18 +7,18 @@ public class Cycling : Activity
         _activityType = "Cycling";
     }
 
-    public override void GetDistance()
+    public override string GetDistance()
     {
-        
+        return "";
     }
 
-    public override void GetSpeed()
+    public override string GetSpeed()
     {
-        
+        return "";
     }
 
-    public override void GetPace()
+    public override string GetPace()
     {
-        
+        return "";
     }
 }

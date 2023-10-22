@@ -17,24 +17,48 @@ class Program
             {
                 // Running
                 case 1:
+                Console.WriteLine("What is the date of the activity? (Ex: 03 Nov 2022)");
+                string date0 = Console.ReadLine();
+                Console.WriteLine("How long was it for in minutes? (Ex: 30)");
+                string lengthString0 = Console.ReadLine();
+                double length0 = double.Parse(lengthString0);
+                Console.WriteLine("How far was the distance in miles? (Ex: 3.0)");
+                string distanceString0 = Console.ReadLine();
+                float distance0 = float.Parse(distanceString0);
+
+                Running running = new Running(date0, length0, distance0);
+                running.GetSummary();
+
                 break;
                 // Cycling
                 case 2:
+                Console.WriteLine("What is the date of the activity? (Ex: 03 Nov 2022)");
+                string date1 = Console.ReadLine();
+                Console.WriteLine("How long was it for in minutes? (Ex: 30)");
+                string lengthString1 = Console.ReadLine();
+                double length1 = double.Parse(lengthString1);
+                Console.WriteLine("How far was the distance in miles? (Ex: 3.0)");
+                string distanceString1 = Console.ReadLine();
+                float distance1 = float.Parse(distanceString1);
+
+                Cycling cycling = new Cycling(date1, length1, distance1);
+                cycling.GetSummary();
+
                 break;
                 // Swimming
                 case 3:
                 Console.WriteLine("What is the date of the activity? (Ex: 03 Nov 2022)");
-                string date = Console.ReadLine();
+                string date2 = Console.ReadLine();
                 Console.WriteLine("How long was it for in minutes? (Ex: 30)");
-                string lengthString = Console.ReadLine();
-                double length = double.Parse(lengthString);
+                string lengthString2 = Console.ReadLine();
+                double length2 = double.Parse(lengthString2);
                 Console.WriteLine("How far was the distance in miles? (Ex: 3.0)");
-                string distanceString = Console.ReadLine();
-                float distance = float.Parse(distanceString);
+                string distanceString2 = Console.ReadLine();
+                float distance2 = float.Parse(distanceString2);
                 Console.WriteLine("How many laps did you swim? (Ex: 6)");
-                string lapString = Console.ReadLine();
-                int lap = int.Parse(lapString);
-                Swimming swim = new Swimming(date, length, distance, lap);
+                string lapString2 = Console.ReadLine();
+                int lap2 = int.Parse(lapString2);
+                Swimming swim = new Swimming(date2, length2, distance2, lap2);
                 Console.WriteLine(swim.GetSummary());
                 swim.GetDistance();
                 swim.GetSpeed();
