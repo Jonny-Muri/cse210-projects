@@ -9,6 +9,7 @@ class Program
         Outdoor outdoor = new Outdoor("NatureFest", "Celebrates the beauty and wonders of the natural world", "Oct 27th", "5:00PM", "Partly Sunny");
 
         Console.WriteLine("\nLecture: ");
+        lecture.AskAddress();
         Console.WriteLine(lecture.StandardDetail());
         Thread.Sleep(3000);
         Console.WriteLine(lecture.FullDetails());
@@ -17,6 +18,7 @@ class Program
         Thread.Sleep(3000);
         
         Console.WriteLine("\nReception: ");
+        reception.AskAddress();
         Console.WriteLine(reception.StandardDetail());
         Thread.Sleep(3000);
         Console.WriteLine(reception.FullDetails());
@@ -25,6 +27,7 @@ class Program
         Thread.Sleep(3000);
 
         Console.WriteLine("\nOutdoor Gathering: ");
+        outdoor.AskAddress();
         Console.WriteLine(outdoor.StandardDetail());
         Thread.Sleep(3000);
         Console.WriteLine(outdoor.FullDetails());

@@ -32,4 +32,21 @@ public class Event
         string description = $"{_titleType}:\n{_titleEvent} on {_date}";
         return description;
     }
+
+    public void AskAddress()
+    {
+        Console.WriteLine("Please fill out the information on where the event will take place: ");
+        Console.WriteLine("What is the name of the street?");
+        string street = Console.ReadLine();
+        Console.WriteLine("What is the name of the city?");
+        string city = Console.ReadLine();
+        Console.WriteLine("What is the name of the state?");
+        string state = Console.ReadLine();
+        Console.WriteLine("What is the zip code?");
+        string zip = Console.ReadLine();
+
+        Address address = new Address(street, city, state, zip);
+        address.Display();
+
+    }
 }
