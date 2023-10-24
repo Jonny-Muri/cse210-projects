@@ -2,23 +2,27 @@ using System;
 
 public class Running : Activity
 {
-    public Running(string date, double length, float distance) : base(date, length, distance)
+    public Running(string date, double length, double distance) : base(date, length)
     {
         _activityType = "Running";
+        _distance = distance;
+        _pace += _length / _distance;
+        _speed += 60 / _pace;
+       
     }
 
-    public override string GetDistance()
+    public override void GetDistance()
     {
-        return _distance.ToString();
+        Console.WriteLine(_distance);
     }
 
-    public override string GetSpeed()
+    public override void GetSpeed()
     {
-        return "";
+        Console.WriteLine(_speed);
     }
 
-    public override string GetPace()
+    public override void GetPace()
     {
-        return "";
+        Console.WriteLine(_pace);
     }
 }

@@ -3,31 +3,29 @@ using System;
 public class Swimming : Activity
 {
     private int _laps;
-    public Swimming(string date, double length,float distance, int laps) : base(date, length, distance)
+    public Swimming(string date, double length, int laps) : base(date, length)
     {
         _laps = laps;
         _activityType = "Swimming";
+        _distance +=  _laps * 50 / 1000 * 0.62;
+        _speed += _distance / _length * 60;
+        _pace += _length / _distance;
+
     }
 
-    public override string GetDistance()
+    public override void GetDistance()
     {
-        _distance = _laps * 50 / 1000;
-        return _distance.ToString();
-        
+        Console.WriteLine(_distance);
     }
 
-    public override string GetSpeed()
+    public override void GetSpeed()
     {
-        _speed = _distance / ((float)_length) * 60;
-        return _speed.ToString();
-        
+        Console.WriteLine(_speed);
     }
 
-    public override string GetPace()
+    public override void GetPace()
     {
-        _pace = ((float)_length) / _distance;
-        return _pace.ToString();
-        
+        Console.WriteLine(_pace);
     }
         
 }
