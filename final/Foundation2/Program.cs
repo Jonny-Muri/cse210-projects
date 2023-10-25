@@ -17,7 +17,9 @@ class Program
         Console.WriteLine("Shipping Label:");
         order1.DisplayShipping();
         order1.CalculatePay();
+
         Console.WriteLine();
+        
         Console.WriteLine("Order 2: ");
         Console.WriteLine("Packing Label:");
         order2.DisplayPacking();
