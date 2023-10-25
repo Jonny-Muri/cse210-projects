@@ -32,8 +32,8 @@ public class Comment
         
         for (int i = 0; i <=2; i++)
         {
-            Console.WriteLine($"{_name[i]}: ");
-            Console.WriteLine(_comment[i]);
+            Console.WriteLine($"{_name[i+3]}: ");
+            Console.WriteLine(_comment[i+3]);
         }
     }
 
@@ -48,8 +48,8 @@ public class Comment
         
         for (int i = 0; i <=2; i++)
         {
-            Console.WriteLine($"{_name[i]}: ");
-            Console.WriteLine(_comment[i]);
+            Console.WriteLine($"{_name[i+6]}: ");
+            Console.WriteLine(_comment[i+6]);
         }
     }
    
